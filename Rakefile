@@ -6,7 +6,7 @@ require 'rake/testtask'
 Rake::TestTask.new do |t|
   t.libs << 'lib/lorem_tolkien'
   t.test_files = FileList['test/lib/lorem_tolkien/*_test.rb']
-  t.verbose = true
+  t.verbose = false
 end
 
 task :default => :test
