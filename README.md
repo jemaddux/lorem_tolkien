@@ -1,7 +1,9 @@
 # LoremTolkien
 
 [![Build Status](https://travis-ci.org/jemaddux/lorem_tolkien.svg?branch=master)](https://travis-ci.org/jemaddux/lorem_tolkien)
+
 [![Code Climate](https://codeclimate.com/github/jemaddux/lorem_tolkien/badges/gpa.svg)](https://codeclimate.com/github/jemaddux/lorem_tolkien)
+
 [![Test Coverage](https://codeclimate.com/github/jemaddux/lorem_tolkien/badges/coverage.svg)](https://codeclimate.com/github/jemaddux/lorem_tolkien)
 
 ## Installation
