@@ -2,18 +2,18 @@ require "lorem_tolkien/version"
 
 module LoremTolkien
   def self.sentence
-    SOURCE[rand(0..(SOURCE.length - 1))]
+    QUOTES[rand(0..(QUOTES.length - 1))]
   end
 
   def self.sentences(n=5)
     temp = ""
     n.times do |x|
-      temp += SOURCE[x % SOURCE.length] + " "
+      temp += QUOTES[x % QUOTES.length] + " "
     end
     return temp
   end
 
-  SOURCE = [
+  QUOTES = [
     "Do you wish me a good morning, or mean that it is a good morning whether I want it or not; or that you feel good this morning; or that it is a morning to be good on?",
     "In a hole in the ground there lived a hobbit.",
     "There is nothing like looking, if you want to find something.",
