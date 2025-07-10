@@ -24,7 +24,7 @@ Or install it yourself as:
 
     $ gem build lorem_tolkien.gemspec 
 
-    $ gem push lorem_tolkien-0.1.2.gem
+    $ gem push lorem_tolkien-1.0.0.gem
 
 ## Usage
 
