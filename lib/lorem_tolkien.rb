@@ -3,7 +3,10 @@ require "yaml"
 
 module LoremTolkien
   QUOTES_PATH = File.expand_path("lorem_tolkien/quotes.yml", __dir__)
-  QUOTES = YAML.load_file(QUOTES_PATH)["quotes"]
+  RAW_QUOTES = YAML.load_file(QUOTES_PATH)["quotes"]
+
+  # Flatten all quotes for legacy/random use
+  QUOTES = RAW_QUOTES.values.flatten
 
   def self.sentence
     QUOTES[rand(0..(QUOTES.length - 1))]
@@ -34,22 +37,15 @@ module LoremTolkien
   def self.words(n=10)
     # Generate exactly n words from Tolkien quotes
     return "" if n <= 0
-    
     all_words = []
-    
-    # Collect all words from quotes
     QUOTES.each do |quote|
       words = quote.split(/\s+/)
       all_words.concat(words)
     end
-    
-    # If we don't have enough words, cycle through them
     if all_words.length < n
       cycles = (n.to_f / all_words.length).ceil
       all_words = all_words * cycles
     end
-    
-    # Shuffle the words for more randomness and take exactly n words
     selected_words = all_words.shuffle.first(n)
     selected_words.join(" ")
   end
@@ -57,7 +53,6 @@ module LoremTolkien
   def self.characters(n=50)
     # Generate text with exactly n characters from Tolkien quotes
     return "" if n <= 0
-    
     all_text = ""
     QUOTES.each { |quote| all_text += quote + " " }
     if all_text.length < n
@@ -69,10 +64,22 @@ module LoremTolkien
       last_space = result.rindex(" ")
       if last_space && last_space > n * 0.5
         result = result[0, last_space]
-        # pad if needed
         result += all_text[result.length, n - result.length] if result.length < n
       end
     end
     result[0, n]
+  end
+
+  # New: Get a random quote from a specific character
+  def self.quote(character)
+    char = character.to_s
+    return nil unless RAW_QUOTES.key?(char)
+    quotes = RAW_QUOTES[char]
+    quotes[rand(0..(quotes.length - 1))]
+  end
+
+  # New: List all available characters
+  def self.character_names
+    RAW_QUOTES.keys
   end
 end

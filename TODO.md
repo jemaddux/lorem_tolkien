@@ -9,15 +9,14 @@
 
 ## 2. Content Expansion
 - [ ] Add quotes from The Silmarillion, Unfinished Tales, and other Tolkien works
-- [ ] Organize quotes by character (Gandalf, Bilbo, Aragorn, etc.)
+- [x] Organize quotes by character (Gandalf, Bilbo, Aragorn, etc.)
 - [ ] Categorize quotes by themes (adventure, wisdom, friendship, etc.)
 - [ ] Include quotes in Elvish languages (with translations)
 - [ ] Add quotes from The Children of Húrin and other posthumous works
 - [ ] Include famous poems and songs from Middle-earth
 
 ## 3. Better Code Structure
-- [ ] Move quotes to separate YAML/JSON files for easier maintenance
-- [ ] Organize quotes by source, character, or theme
+- [x] Move quotes to separate YAML/JSON files for easier maintenance
 - [ ] Implement weighted random selection for more variety
 - [ ] Add caching for better performance with large quote sets
 - [ ] Create separate modules for different quote categories
