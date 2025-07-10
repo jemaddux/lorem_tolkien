@@ -2,10 +2,9 @@
 
 ## 1. Enhanced API & Functionality
 - [x] Add `LoremTolkien.paragraph` and `LoremTolkien.paragraphs(n)` methods
-- [ ] Add `LoremTolkien.words(n)` for specific word counts
+- [x] Add `LoremTolkien.words(n)` for specific word counts
 - [ ] Add `LoremTolkien.characters(n)` for character limits
 - [ ] Add methods that generate random-length content within ranges
-- [ ] Allow custom separators between sentences/paragraphs
 - [ ] Add `LoremTolkien.paragraphs_with_word_count(min, max)` for flexible paragraph generation
 
 ## 2. Content Expansion

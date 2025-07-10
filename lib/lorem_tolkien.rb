@@ -27,6 +27,29 @@ module LoremTolkien
     paragraphs.join("\n\n")
   end
 
+  def self.words(n=10)
+    # Generate exactly n words from Tolkien quotes
+    return "" if n <= 0
+    
+    all_words = []
+    
+    # Collect all words from quotes
+    QUOTES.each do |quote|
+      words = quote.split(/\s+/)
+      all_words.concat(words)
+    end
+    
+    # If we don't have enough words, cycle through them
+    if all_words.length < n
+      cycles = (n.to_f / all_words.length).ceil
+      all_words = all_words * cycles
+    end
+    
+    # Shuffle the words for more randomness and take exactly n words
+    selected_words = all_words.shuffle.first(n)
+    selected_words.join(" ")
+  end
+
   QUOTES = [
     "Do you wish me a good morning, or mean that it is a good morning whether I want it or not; or that you feel good this morning; or that it is a morning to be good on?",
     "In a hole in the ground there lived a hobbit.",

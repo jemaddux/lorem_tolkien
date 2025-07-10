@@ -36,6 +36,10 @@ LoremTolkien.sentence
 LoremTolkien.sentences(5)
   => "Do you wish me a good morning, or mean that it is a good morning whether I want it or not; or that you feel good this morning; or that it is a morning to be good on? In a hole in the ground there lived a hobbit. There is nothing like looking, if you want to find something. You certainly usually find something, if you look, but it is not always quite the something you were after. It does not do to leave a live dragon out of your calculations, if you live near him."
 
+### Specific Word Count
+LoremTolkien.words(10)
+  => "arranging, do Where yore as morning; the fire want shining"
+
 ### Single Paragraph
 LoremTolkien.paragraph
   => "Do you wish me a good morning, or mean that it is a good morning whether I want it or not; or that you feel good this morning; or that it is a morning to be good on? In a hole in the ground there lived a hobbit. There is nothing like looking, if you want to find something."
