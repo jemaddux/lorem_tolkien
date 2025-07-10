@@ -28,11 +28,25 @@ Or install it yourself as:
 
 ## Usage
 
+### Single Sentence
 LoremTolkien.sentence
   => "Do you wish me a good morning, or mean that it is a good morning whether I want it or not; or that you feel good this morning; or that it is a morning to be good on?"
 
+### Multiple Sentences
 LoremTolkien.sentences(5)
   => "Do you wish me a good morning, or mean that it is a good morning whether I want it or not; or that you feel good this morning; or that it is a morning to be good on? In a hole in the ground there lived a hobbit. There is nothing like looking, if you want to find something. You certainly usually find something, if you look, but it is not always quite the something you were after. It does not do to leave a live dragon out of your calculations, if you live near him."
+
+### Single Paragraph
+LoremTolkien.paragraph
+  => "Do you wish me a good morning, or mean that it is a good morning whether I want it or not; or that you feel good this morning; or that it is a morning to be good on? In a hole in the ground there lived a hobbit. There is nothing like looking, if you want to find something."
+
+### Multiple Paragraphs
+LoremTolkien.paragraphs(3)
+  => "Do you wish me a good morning, or mean that it is a good morning whether I want it or not; or that you feel good this morning; or that it is a morning to be good on? In a hole in the ground there lived a hobbit. There is nothing like looking, if you want to find something.
+
+Far over the misty mountains cold To dungeons deep and caverns old We must away ere break of day To seek the pale enchanted gold. The dwarves of yore made mighty spells.
+
+You certainly usually find something, if you look, but it is not always quite the something you were after. It does not do to leave a live dragon out of your calculations, if you live near him."
 
 ## Contributing
 

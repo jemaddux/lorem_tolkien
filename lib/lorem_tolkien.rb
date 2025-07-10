@@ -13,6 +13,20 @@ module LoremTolkien
     return temp
   end
 
+  def self.paragraph
+    # Generate a paragraph with 3-5 sentences
+    sentence_count = rand(3..5)
+    sentences(sentence_count).strip
+  end
+
+  def self.paragraphs(n=3)
+    paragraphs = []
+    n.times do
+      paragraphs << paragraph
+    end
+    paragraphs.join("\n\n")
+  end
+
   QUOTES = [
     "Do you wish me a good morning, or mean that it is a good morning whether I want it or not; or that you feel good this morning; or that it is a morning to be good on?",
     "In a hole in the ground there lived a hobbit.",
