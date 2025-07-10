@@ -50,6 +50,28 @@ module LoremTolkien
     selected_words.join(" ")
   end
 
+  def self.characters(n=50)
+    # Generate text with exactly n characters from Tolkien quotes
+    return "" if n <= 0
+    
+    all_text = ""
+    QUOTES.each { |quote| all_text += quote + " " }
+    if all_text.length < n
+      cycles = (n.to_f / all_text.length).ceil
+      all_text = all_text * cycles
+    end
+    result = all_text[0, n]
+    if n >= 10 && result.length == n && result[-1] =~ /[\w]/
+      last_space = result.rindex(" ")
+      if last_space && last_space > n * 0.5
+        result = result[0, last_space]
+        # pad if needed
+        result += all_text[result.length, n - result.length] if result.length < n
+      end
+    end
+    result[0, n]
+  end
+
   QUOTES = [
     "Do you wish me a good morning, or mean that it is a good morning whether I want it or not; or that you feel good this morning; or that it is a morning to be good on?",
     "In a hole in the ground there lived a hobbit.",
